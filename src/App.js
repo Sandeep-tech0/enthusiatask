@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
-import List from "./List";
 
 function App() {
   const [country, setCountry] = useState([]);
@@ -64,62 +63,62 @@ function App() {
   }
 
   return (
-    <div>
-      <List /></div>
-    // <Container className="content">
-    //   <div className="row">
-    //     <div className="col-sm-12">
-    //       <h5 className="mt-4 mb-4 fw-bold">Output  { }</h5>
 
-    //       <div className="row mb-3">
-    //         <div className="form-group col-md-4">
-    //           <label className="mb-2">Country</label>
-    //           <select name="country" className="form-control" onChange={(e) => handlecountry(e)}>
-    //             <option>--Select Country--</option>
-    //             {
-    //               country.map((getcon) => (
-    //                 <option key={getcon.id} value={getcon.iso2}> {getcon.name}</option>
-    //               ))
-    //             }
+    
+    <Container className="content">
+      <div className="row">
+        <div className="col-sm-12">
+          <h5 className="mt-4 mb-4 fw-bold">Output  { }</h5>
 
-    //           </select>
-    //         </div>
-    //         {countryid ? <div className="form-group col-md-4">
-    //           <label className="mb-2">State</label>
-    //           <select name="state" className="form-control" onChange={(e) => handlestate(e)}>
-    //             <option>--Select State--</option>
-    //             {
-    //               stetes.map((st, index) => (
-    //                 <option key={index} value={st.iso2}>{st.name}</option>
-    //               ))
-    //             }
-    //           </select>
-    //         </div>
-    //           : ""}
-    //         { cityid?
-    //           <div className="form-group col-md-4">
-    //             <label className="mb-2">City</label>
-    //             <select name="state" className="form-control">
-    //               <option>--Select city--</option>
-    //               {
-    //                 city.map((st, index) => (
-    //                   <option key={index} value={st.id}>{st.name}</option>
-    //                 ))
-    //               }
-    //             </select>
-    //           </div>
+          <div className="row mb-3">
+            <div className="form-group col-md-4">
+              <label className="mb-2">Country</label>
+              <select name="country" className="form-control" onChange={(e) => handlecountry(e)}>
+                <option>--Select Country--</option>
+                {
+                  country.map((getcon) => (
+                    <option key={getcon.id} value={getcon.iso2}> {getcon.name}</option>
+                  ))
+                }
 
-    //           : ""}
+              </select>
+            </div>
+            {countryid ? <div className="form-group col-md-4">
+              <label className="mb-2">State</label>
+              <select name="state" className="form-control" onChange={(e) => handlestate(e)}>
+                <option>--Select State--</option>
+                {
+                  stetes.map((st, index) => (
+                    <option key={index} value={st.iso2}>{st.name}</option>
+                  ))
+                }
+              </select>
+            </div>
+              : ""}
+            { cityid?
+              <div className="form-group col-md-4">
+                <label className="mb-2">City</label>
+                <select name="state" className="form-control">
+                  <option>--Select city--</option>
+                  {
+                    city.map((st, index) => (
+                      <option key={index} value={st.id}>{st.name}</option>
+                    ))
+                  }
+                </select>
+              </div>
 
-
-    //       </div>
+              : ""}
 
 
+          </div>
 
 
-    //     </div>
-    //   </div>
-    // </Container>
+
+
+        </div>
+      </div>
+    </Container>
   );
 }
 export default App;
